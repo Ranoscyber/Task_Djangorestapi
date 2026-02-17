@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: django-rest-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn taskmanager_backend.wsgi:application
